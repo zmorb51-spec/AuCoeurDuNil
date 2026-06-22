@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Au Cœur du Nil — contemporary garments shaped between Cairo, Paris and quiet modernism." />
+  <meta name="theme-color" content="#171817" />
+  <title>Au Cœur du Nil — Official Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600&family=Newsreader:opsz,wght@6..72,300;6..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="announcement"><span>Complimentary delivery in Egypt over EGP 5,000</span><span class="announcement-side">Cairo · Paris · The Nile</span></div>
+  <header class="site-header" id="site-header">
+    <button class="icon-button menu-trigger" aria-label="Open menu" data-action="toggle-menu">
+      <span></span><span></span>
+    </button>
+    <a class="brand-mark" href="#/" aria-label="Au Coeur du Nil home">
+      <img src="assets/logo-original.png" alt="Au Cœur du Nil" id="brand-logo" />
+      <span class="brand-wordmark" aria-hidden="true">Au Cœur du Nil</span>
+    </a>
+    <nav class="desktop-nav" aria-label="Primary navigation">
+      <a href="#/collections">Collections</a>
+      <a href="#/shop">Shop</a>
+      <a href="#/lookbook">Lookbook</a>
+      <a href="#/journal">Journal</a>
+      <a href="#/about">Maison</a>
+    </nav>
+    <div class="header-actions">
+      <button class="text-button" data-action="search">Search</button>
+      <a class="text-button desktop-only" href="#/account">Account</a>
+      <a class="icon-link" href="#/wishlist" aria-label="Wishlist">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.8 4.6a5.4 5.4 0 0 0-7.6 0L12 5.8l-1.2-1.2a5.4 5.4 0 1 0-7.6 7.6L12 21l8.8-8.8a5.4 5.4 0 0 0 0-7.6Z"/></svg>
+        <span class="badge" id="wishlist-count">0</span>
+      </a>
+      <button class="icon-link" data-action="cart" aria-label="Open bag">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 8h12l1 13H5L6 8Zm3 0V6a3 3 0 0 1 6 0v2"/></svg>
+        <span class="badge" id="cart-count">0</span>
+      </button>
+    </div>
+  </header>
+
+  <aside class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <button class="menu-close" data-action="toggle-menu" aria-label="Close menu">×</button>
+    <nav>
+      <a href="#/collections">Collections <span>01</span></a>
+      <a href="#/shop">Shop <span>02</span></a>
+      <a href="#/lookbook">Lookbook <span>03</span></a>
+      <a href="#/journal">Journal <span>04</span></a>
+      <a href="#/about">Maison <span>05</span></a>
+      <a href="#/account">Account <span>06</span></a>
+      <a href="#/tracking">Order tracking <span>07</span></a>
+    </nav>
+    <p>Clothing as a meeting place.<br>Cairo — Paris.</p>
+  </aside>
+
+  <main id="app" tabindex="-1"></main>
+
+  <footer class="site-footer">
+    <div class="footer-heading">
+      <p class="eyebrow">Private correspondence</p>
+      <h2>Letters from<br>the river.</h2>
+      <form class="newsletter" id="newsletter-form">
+        <input type="email" placeholder="Email address" aria-label="Email address" required />
+        <button type="submit" aria-label="Subscribe">→</button>
+      </form>
+      <p class="form-note" id="newsletter-note">New work, atelier notes and private appointments.</p>
+    </div>
+    <div class="footer-links">
+      <div><h3>Client services</h3><a href="#/contact">Contact</a><a href="#/shipping">Delivery & returns</a><a href="#/tracking">Track an order</a><a href="#/care">Garment care</a></div>
+      <div><h3>Maison</h3><a href="#/about">Our story</a><a href="#/journal">Journal</a><a href="#/stockists">Stockists</a><a href="#/responsibility">Responsibility</a></div>
+      <div><h3>Social</h3><a href="#/instagram">Instagram</a><a href="#/pinterest">Pinterest</a><a href="#/press">Press</a></div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 Au Cœur du Nil</span><span>Egypt / EGP</span><span>Privacy · Terms</span></div>
+  </footer>
+
+  <div class="overlay" id="overlay" hidden></div>
+  <aside class="cart-drawer" id="cart-drawer" aria-hidden="true">
+    <div class="drawer-header"><p>Your bag <span id="drawer-count">0</span></p><button data-action="cart" aria-label="Close bag">×</button></div>
+    <div id="cart-items" class="cart-items"></div>
+    <div class="cart-empty" id="cart-empty"><p>Your bag is quiet.</p><a href="#/shop" data-action="cart">Discover the collection</a></div>
+    <div class="cart-summary" id="cart-summary" hidden>
+      <div><span>Subtotal</span><strong id="cart-total">EGP 0</strong></div>
+      <p>Taxes included. Delivery calculated at checkout.</p>
+      <a class="button button-dark full" href="#/checkout" data-action="cart">Proceed to checkout</a>
+      <a class="underlink center" href="#/cart" data-action="cart">View bag</a>
+    </div>
+  </aside>
+
+  <div class="search-panel" id="search-panel" aria-hidden="true">
+    <button data-action="search" class="search-close" aria-label="Close search">×</button>
+    <label for="search-input">What are you looking for?</label>
+    <div class="search-field"><input id="search-input" type="search" placeholder="Search the collection" autocomplete="off"><span>↵</span></div>
+    <div id="search-results" class="search-results"></div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js"></script>
+</body>
+</html>
